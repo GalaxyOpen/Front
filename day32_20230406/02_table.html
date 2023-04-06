@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table, tr, td {
+        table, tr, td, th {
             border: 1px dotted black;
+            border-collapse: collapse;
+            /*안쪽 여백을 지정할 때*/
+            padding : 10px;
+            
+        }
+        td{
+            text-align :center;
         }
     </style>
 </head>
@@ -15,18 +22,22 @@
     <table>
         <thead>
             <tr>
-                <td>번호</td>
-                <td>이름</td>
+                <th>번호</th>
+                <th>이름</th>
+                <th>특성</th>
+                <!-- th태그는 가운데 정렬 -->
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>1</td>
                 <td>피카츄</td>
+                <td>전기</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>파이리</td>
+                <td>불</td>
             </tr>
 
         </tbody>   
