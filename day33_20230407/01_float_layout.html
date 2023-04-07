@@ -73,7 +73,7 @@
             /*브라우저 가로 비율 70퍼센트를 가져감*/
             width: 70%;
         }
-        .main::after {
+        .main::after { /*가상선택자*/
             content:"";
             clear: both;
             display : table;
@@ -82,7 +82,7 @@
             border: 3px solid #00a170;
         }
 
-        @media(max-width: 800px) {
+        @media(max-width: 800px) { /*특정 사이즈가 됬을 때 css를 변경하는 것*/
             .nav{
             width:100%;
             }

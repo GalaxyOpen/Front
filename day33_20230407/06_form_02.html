@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_02</title>
+</head>
+<body>
+    사는지역:
+    <!-- select name에 city를 입력하게 되면 city값에 유저가 선택하는 값이 저장된다. 
+      물론 form태그 써야한다.-->
+    <select name="city" id=""> <!-- select 누르고 tab치면 자동 완성됨.-->
+        <option value="">선택해주세요</option>
+        <option value="">인천</option>
+        <option value="">서울</option> 
+        <option value="">제주</option>
+
+    </select>
+    <br>
+    성별:<br>
+    남: <input type="radio" name="gender" value ="male">
+    여: <input type="radio" name="gender" value ="female">
+    <!-- 이 때 선택하는 버튼을 라디오 버튼이라 한다.
+    이때 input 값 중 name 값이 달라버리면 모두 선택이 가능하다.
+    그리고 value 값이 달라야 한다.-->
+    <br>
+    먹고 싶은음식: <br>
+    <input type="checkbox" name="food" value ="chicken">치킨
+    <input type="checkbox" name="food" value ="pizza">피자
+    <input type="checkbox" name="food" value = "sam">삼겹살
+
+    <!-- 쓰는 이유는 받아서 서버로 보내기 위함. --> 
+
+</body>
+</html>
