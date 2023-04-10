@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example_모범답안</title>
+    <script> // 부트스트랩을 사용해볼 예정
+    
+
+    </script>
+</head>
+<body>
+    <div id = "save_form">
+        <laber for = "id">아이디</laber><br>
+        <input type="text" id="id" name = "id"><br>
+
+        <laber for = "password">비밀번호</laber><br>
+        <input type="password" id="password" name = "password"><br>
+
+        <laber for = "password_confrim">비밀번호 재확인</laber><br>
+        <input type="password" id="password_confirm" name = "password_corfirm"><br>
+        
+        
+        <laber for = "name">이름</laber><br>
+        <input type="text" id="name" name = "name"><br> 
+
+        
+        <laber for = "birth_year">생년월일</laber><br>
+        <input type="text" id="birth_year" name = "birth_year" placeholder="년(4자)">
+        <select name="birth_month" id="">
+            <option value="">월</option>
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+            <option value="1">6</option>
+            <option value="1">7</option>
+            <option value="1">8</option>
+            <option value="1">9</option>
+            <option value="1">10</option>
+            <option value="1">11</option>
+            <option value="1">12</option>
+        </select>
+        <input type="text" id = birth_day name = "birth_day" placeholder="일"><br>
+        <label for="gender">성별</label>
+        <select name="gender" id="gender">
+            <option value="male">남</option>
+            <option value="female">여</option>
+            <option value="no">선택안함</option>
+        </select><br>
+        <label for="moblie">휴대전화</label><br>
+        <select name="nation_code" id="">
+            <option value="+82">대한민국 +82</option>
+            <option value="+1">미국 +1</option>
+            <option value="+33" selected>프랑스 +33</option>
+            <!-- selected를 쓸 경우 그걸 쓴 값이 선택된 상태(default)로 보여지게 된다.-->
+        </select><br>
+        <input type="text" id="mobile" name ="mobile" placeholder = "전화번호 입력">
+        <!-- oneclick 속성: onclick 속성을 적용한 요소(태그)에 click 이벤트가 발생하면 
+                            실행할 javascript 함수 또는 문법을 지정함
+                        아래 버튼을 클릭하면 hello 함수 호출-->
+        <input type="button" value="인증번호 받기" onclick="hello()">
+        <input type="text" id = "mobile" name="mobile_check" placeholder="인증번호 입력하세요">
+ 
+        <br><input type="submit" value="가입하기">       
+    </div>
+</body>
+<!-- 스크립트 추가는 위의 head 안에 써도 되고 body가 끝나고 써도 상관 없지만 보통은 body가 끝나고 씀.-->
+<script>
+    // 함수 정의 1 : 자바의 메소드와 비슷함(오래된 방식).
+    // function hello(){
+    // }
+
+    // 함수정의 2 : 자바 스크립트와 비슷(최근 방식). 화살표 함수라고도 함(arrow function)
+    const hello = () => {
+        console.log("콘솔에 보여집니다");
+        alert("인증번호를 입력하도록 합니다");
+
+    }
+
+</script>
+</html>
