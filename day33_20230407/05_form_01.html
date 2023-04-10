@@ -9,7 +9,9 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <!-- 사용자로부터 입력을 받아서 어딘가(서버)로 보낼 때 사용 
+    <!-- 사용자로부터 입력을 받아서 어딘가(서버)로 보낼 때 사용
+        폼 안에 input태그가 있어야 함.
+        p로 끝나는 용어들이 나중에 많이 나올텐데 이 p는 프로토콜을 의미 
     action : 목적지(보통 서버에서 처리할 주소를 작성함)
     method : 전송방식(http request method)을 지정함
             get:입력값이 주소창에 노출됨(기본 디폴트값). 검색어에 주로 씀.
@@ -17,7 +19,7 @@
     <!-- mt: margin top, me(margin end):오른쪽, ms(margin start):왼쪽, mb(margin bottom) : 아래쪽 -->           
  <div class="container mt-5">
     
-    <form action="/login" method ="post">
+    <form action="/login" method ="post"> <!-- 뜻: 로그인할 때 포스트 방식으로 하겠다.-->
         <div class="form-floating mb-3">
         <input type="text" id="email" name="member_email" 
                placeholder ="이메일을 입력해주세요" class = "form form-control">
@@ -31,8 +33,19 @@
     </div>
     
     <input type="submit" value="login" class="btn btn-primary mt-3">
+    <!-- form 태그 안에 작성한 버튼 테그는 submit의 역할을 함. -->
+    <button>버튼이에요</button>
+    <!-- form 태그 안에 submit 역할이 아닌 일반 버튼을 사용하고 싶다면
+    input type을 쓰면 된다.-->
+    <input type="button" value = "button type">
+
+        <!-- get 요청-->      
         <!-- http://127.0.0.1:5500/login?member_email=asdfasdf -->
+        <!-- method를 get으로 입력하면 입력한 값을 주소창에서 확인할 수 있다.-->
         <!-- http://127.0.0.1:5500/login?member_email=aaa&member_password=1234   -->
+
+        <!-- post 요청-->
+        <!-- http://127.0.0.1:5500/login-->
     </form>
 </div>
 </body>
