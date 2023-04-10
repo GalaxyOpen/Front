@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 입문</title>
+</head>
+<body>
+   
+</body>
+<script>
+    console.log("hello, javascript!")
+    // 변수 선언 방법
+    // var : 변수 선언할때 씀
+    // javascript에서는 변수 선언을 따로 하지 않음(int, String을 쓰지 않음). 
+    // 하지만 그렇다고 변수 타입이 없는건 아님.
+
+    var num1 = 10; // 옛날방식이긴 하나 지금도 쓰긴 하고 현재는 안쓰려고는 함.
+    console.log("num1",num1);
+
+    let num2 =20; 
+    console.log("num2", num2)
+
+    num2 = 100;
+    console.log("num2", num2)
+
+    let str1 ="안녕하세요";
+    console.log("str1", str1)
+    
+    const num3 = 7;
+    console.log("num3", num3);
+
+    // num3 = 777;
+    // console.log("num3", num3);
+    // let과 const는 잘 기억해둬야함. 
+    // let = 가변
+    // const = 불변 (java에서 final 키와 비슷함)
+    // 더블쿼터(큰따옴표), 싱글쿼터(작은따옴표) 구별을 안함.
+    // 변수값 출력시 백틱(`) 기호 사용 가능
+    
+    console.log(`num3: ${num3}`);
+
+    let var1 = 10;
+    console.log("var 타입: ", typeof var1);
+
+    var1 = "안녕";
+    console.log("var1 타입: ", typeof var1);
+
+    var1 = true;
+    console.log("var1 타입: ", typeof var1);
+    
+    var1 = 0.123;
+    console.log("var1 타입: ", typeof var1);
+
+    const var2 = 10;
+    const var3 = "10";
+    // ==; 값이 같은지 비교(알아서 형변환해서 값만 비교함)
+    // ===; 값, 타입이 모두 같은지 비교
+    if(var2 === var3){
+        console.log("둘이 같아요")
+
+    }else{
+        console.log("둘이 달라요")
+    }
+
+</script>
+</html>
