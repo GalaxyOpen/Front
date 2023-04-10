@@ -15,14 +15,15 @@
     <h4></h4>
 </body>
 <script>
+    //document 값 출력
     console.log(document); 
-    //현재 문서에 있는 모든 h2요소 출력
-    //잡다한 모든게 출력됨.
+
+    //현재 문서에 있는 모든 h2요소 출력.
     console.log(document.getElementsByTagName("h2"));
     const h2all = document.getElementsByTagName("h2");
-    console.log(h2all[0]);
+    console.log(h2all);
     console.log(h2all.length);
-
+    console.log(h2all[0]);
     // 첫번째 h2태그 innerHTML 속성값 출력
     console.log(h2all[0].innerHTML);
     console.log(h2all[0].innerText);
@@ -38,12 +39,14 @@
     console.log(document.querySelector("h2"));
     console.log(document.querySelectorAll("h2"));
     const h2all2 = document.querySelectorAll("h2");
+
+    // 반복문을 활용하여 h2요소들의 innerText 출력
     for(let i=0; i<h2all2.length; i++){
         console.log(h2all2[i].innerText);
     }
 
     //innerHTML 과 innerText의 차이점 : 중요
-    //innerHTML : 태그를 포함한 전체요소를 가리킴
+    //innerHTML : 태그를 포함한 전체요소를 가리킴(span과 함께 같이 모두 나옴)
     //innerText : text만 가지고 있음.
 
     //내용이 없는 h4태그에 텍스트 추가하기
@@ -51,11 +54,11 @@
     //1. h4 태그요소 가져오기
     const h4ele = document.getElementsByTagName("h4");
     
-    //2. h4 태그 innerText 값 지정하기
+    //2. h4 태그 innerText 값 지정하기 
     h4ele[0].innerText = "이 내용이 화면에 보입니다.";
 
     document.getElementsByTagName("h4")[0].innerText = "내일도 열심히!"
 
-
+   // 위 내용을 하는 이유는 자바스크립트 내용을 변수로써 활용하기 위해서
 </script>
 </html>
