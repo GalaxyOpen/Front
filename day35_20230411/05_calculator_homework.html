@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    합산기<br>
+    number1: <input type="text" id = "id1" name = "id1"><br>
+    number2: <input type="text" id = "id2" name = "id2"><br>
+    계산결과 : <span id= "result"></span> <br>
+     <input type="button" value="계산" onclick = "add()"> <br>
+
+</body>
+<script>
+   const add = () => {
+        const input1 = document.getElementById("id1");
+        const input2 = document.getElementById("id2");
+       
+        const plus = document.getElementById("result")
+        plus.innerHTML = parseInt(input1.value)+parseInt(input2.value);
+
+}    
+</script>
+</html>

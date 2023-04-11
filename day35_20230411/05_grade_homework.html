@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    학점계산기<br>
+    Java성적 : <input type="text" id="id1" name="id1"><br>
+    html성적 : <input type="text" id="id2" name="id2"><br>
+    학점 : <span id=grade></span> <br>
+    <input type="button" value="결과조회" onclick="avg()">
+
+</body>
+<script>
+    const input1 = document.getElementById("id1");
+    const input2 = document.getElementById("id2");
+
+  
+
+    function avg(input1, input2) {
+        var sum = input1 + input2;
+        var score = sum / 2;
+
+        if (score >= 90) {
+            grade.innerHTML = "A";
+        } else if (score >= 80) {
+            grade.innerHTML = "B";
+        } else if (score >= 70) {
+            grade.innerHTML = "C";
+        } else if (score >= 60) {
+            grade.innerHTML = "D"
+        } else {
+            grade.innerHTML = "F"
+        }
+    }
+    
+
+
+
+</script>
+
+</html>

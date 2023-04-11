@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>오늘은 4월 11일 화요일</h2>
+    <h3>오늘은 35일차</h3>
+    <div id="id1"></div>
+    <div id="id2">
+
+    </div>
+    <!-- 
+        1. button을 클릭했을 때 fun1함수를 호출하고 h2 태그의 innerText 값을 콘솔에 출력
+        2. button을 클릭했을 때 fun2함수를 호출하고 h3 태그의 innerHTML 값을 alert로 출력.
+        3. button을 클릭했을 때 fun3함수를 호출하고 h2,h3 태그의 innerText 값을 id1이 적용된 div의 innerText 값으로 적용하여 화면에 보이게
+        4. button을 클릭했을 때 fun4함수를 호출하고 id2가 적용된 div에 아래 ex id가 
+           적용된 태그처럼 ul, li를 이용하여 1부터 100까지 출력하는 내용을 만들어보세요. 
+           innerHTML을 써야함. ul과 li를 잘 이용해야함. 대입연산자 써야함. 
+           
+    -->
+    <!-- <div id="ex">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>100</li>
+        </ul>    
+    </div> -->
+    
+    <button onclick="fun1()">버튼1</button>
+    <button onclick="fun2()">버튼2</button>
+    <button onclick="fun3()">버튼3</button>
+    <button onclick="fun4()">버튼4</button>
+    <button onclick="fun5()">버튼5</button>
+
+
+</body>
+<script>    
+ const fun1 = () => {
+        const h2All1 = document.getElementsByTagName("h2");
+        console.log(h2All1[0].innerText);
+       
+    }
+ const fun2 = () => {
+        const h3All1 = document.getElementsByTagName("h3");
+        alert(h3All1[0].innerHTML);
+        
+    }
+    const fun3 = () => {
+        const ele1 = document.getElementsByTagName("h2")[0].innerText;
+        const ele2 = document.getElementsByTagName("h3")[0].innerText;
+        const div1 = document.getElementById("id1");
+        div1.innerText = ele1 + ele2;
+    }
+    const fun4 = () => {
+        // id2가 적용된 요소를 가져오기
+        const div = document.getElementById("id2"); // get
+        // const div2 = document.querySelector("#id2");  query
+        let ul="<ul>";
+        for(let i=1; i<=100; i++){
+            ul+="<li>"+i+"</li>"
+        }    
+        ul+="</ul>" // 만약, 대입 연산자에 += 가 아닌 =를 써버리면 값이 그냥 덮인다. 
+        div.innerHTML = ul;
+    }
+    // javascript method 활용하기(fun4 = fun5 같은함수임)
+    const fun5 = () => {
+        const div = document.getElementById("id2");
+        const ul = document.createElement("ul");
+        console.log(ul);
+
+        for(let i=1; i<100; i++){
+            // li 태그 생성
+            const li= document.createElement("li");
+
+            //li 시작 종료 태그 사이에 i로 만들어진 숫자 텍스트 추가
+            li.appendChild(document.createTextNode(i));
+
+            //만들어진 li를 ul의 자식 태그로 추가
+            ul.appendChild(li);
+        }
+
+        // 특정 요소에 자식 요소로 추가하기 
+        div.appendChild(ul);
+    }    
+</script>
+</html>
