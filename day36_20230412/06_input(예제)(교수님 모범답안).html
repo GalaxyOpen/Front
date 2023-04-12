@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <h7>이메일</h7>
+   <input type="text" class = "form-control" onblur = "email_check()" 
+   id ="member-email" name = "memberEmail">
+   <h7 id="email-result"></h7>
+</body>
+
+<script>
+const email_check = () => {
+   const email = document.getElementById("member-email").value;
+   const emailResult = document.getElementById("email-result") ;
+   if(email.length == 0){
+    emailResult.innerHTML = "필수입력입니다.";
+    emailResult.style.color = "red";
+   }else if(email.length < 5 || email.length > 20 ){
+    emailResult.innerHTML = "5~20자 이내로 입력하세요.";
+    emailResult.style.color = "red";
+   }else if(email.length>= 5 && email.length<=20){
+    emailResult.innerHTML = "완료";
+    emailResult.style.color = "green";
+   }
+}  
+
+</script>
+
+</html>
