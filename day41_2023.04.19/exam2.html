@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="form form-floating mb-3">
+            <div class="item">
+                ID :
+            </div>
+            <input type="text" id="memberUserName" placeholder="소문자와 숫자 및 일부 특수문자(-_) 조합하여 6~10자리 이내로 입력해주세요."
+                class="form form-control">
+            <h6 id="email-result"></h6>
+        </form>
+    </div>
+    
+    <div class="container">
+        <div class="item">
+            비밀번호 설정:
+        </div>
+
+        <input type="text" id="memberPassword" placeholder="영어 대소문자와 숫자, 특수문자(!#$-_)는 필수입니다." class="form form-control">
+        <h6 id="memberPassword1"></h6>
+    </div>
+
+  
+    <div class="container">
+        <div class="item">
+            비밀번호 확인:
+        </div>
+
+        <input type="text" id="passwordConfirm" placeholder="비밀번호 재입력" class="form form-control">
+        <h6 id="passwordCheck"></h6>
+    </div>
+</body>
+<script>
+    const email = document.getElementById("memberUserName");
+    email.addEventListener("blur", function () { 
+        const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/
+        const emailResult = document.getElementById("email-result")
+        if (email.value.match(exp)) {
+            passwordResult.innerHTML = "조건을 충족합니다.";
+            passwordResult.style.color = "green"; 
+
+        } else { 
+            emailResult.innerHTML = "올바른 형식이 아닙니다.";
+            emailResult.style.color = "red";
+        }
+    });
+    const password = document.getElementById("memberPassword");
+    password.addEventListener("blur", function () {
+        const exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!#$])[A-Za-z\d-_!#$]{8,16}$/
+        const passwordResult = document.getElementById("memberPassword1");
+        if (password.value.match(exp)) {
+            passwordResult.innerHTML = "조건을 충족합니다.";
+            passwordResult.style.color = "green";
+        } else if (password.value.length == 0) {
+            passwordResult.innerHTML = "필수 입력 사항입니다.";
+            passwordResult.style.color = "red";
+        } else {
+            passwordResult.innerHTML = "올바른 형식이 아닙니다.";
+            passwordResult.style.color = "red";
+        }
+
+    });
+    const passwordcheck = document.getElementById("passwordConfirm");
+            passwordcheck.addEventListener("blur", function () {
+                const passwordconfirm = document.getElementById("passwordCheck");
+                if (password.value == passwordcheck.value) {
+                    passwordconfirm.innerHTML = "일치합니다";
+                    passwordconfirm.style.color = "green";
+                } else {
+                    passwordconfirm.innerHTML = "일치하지 않습니다";
+                    passwordconfirm.style.color = "red";
+                }
+            });        
+
+</script>
+
+</html>
